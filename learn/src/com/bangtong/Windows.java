@@ -10,6 +10,8 @@ public class Windows {
         board.setLocationRelativeTo(null); // 设置窗口居中
         board.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 退出窗口时释放内存
         MyPanel myPanel = new MyPanel();
+        Thread thread = new Thread(myPanel); // 初始化线程
+        thread.start(); // 启动线程
         board.add(myPanel);
         board.setVisible(true); // 设置窗口可见
     }
